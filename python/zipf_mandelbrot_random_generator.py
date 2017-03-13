@@ -75,7 +75,7 @@ def ZipfMandelbrotRandomGenerator(n, q, v = 1, seed = None):
                 #
                 #   Therefore, the acceptance rate for k = 1 is P(accepted | k = 1) = 1
                 #   and the probability that 1 is returned as random value is
-                #   P(k = 1 and accepted) = P(accepted | k = 1) * P(k = 1) = C = C / 1^q
+                #   P(k = 1 and accepted) = P(accepted | k = 1) * P(k = 1) = C = C / v^q
                 #
                 # Case k >= 1:
                 #
