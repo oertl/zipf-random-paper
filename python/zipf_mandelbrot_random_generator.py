@@ -59,7 +59,7 @@ def ZipfMandelbrotRandomGenerator(n, q, v = 1, seed = None):
 
         # Here, the distribution of k is given by:
         #
-        #   P(k = 0) = C * (H(0.5) - Hx0) = C
+        #   P(k = 0) = C * (H(0.5) - Hx0) = C * h(0) = C / v^q
         #   P(k = m) = C * (H(m + 1/2) - H(m - 1/2)) for 1 <= m < n
         #
         #   where C := 1 / (Hn - Hx0)
@@ -72,9 +72,9 @@ def ZipfMandelbrotRandomGenerator(n, q, v = 1, seed = None):
             #   u >= H(0.5) - h(0) = Hx0 and u is taken from
             #   (Hx0, Hn].
             #
-            #   Therefore, the acceptance rate for k = 1 is P(accepted | k = 1) = 1
+            #   Therefore, the acceptance rate for k = 1 is P(accepted | k = 0) = 1
             #   and the probability that 1 is returned as random value is
-            #   P(k = 1 and accepted) = P(accepted | k = 1) * P(k = 1) = C = C / v^q
+            #   P(k = 0 and accepted) = P(accepted | k = 0) * P(k = 0) = C / v^q
             #
             # Case k >= 1:
             #
