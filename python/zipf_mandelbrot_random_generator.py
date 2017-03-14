@@ -19,7 +19,7 @@ def ZipfMandelbrotRandomGenerator(n, q, v = 1, seed = None):
         return expm1(x) / x if abs(x) > 0 else 1.
 
     # H(x) := ((v+x)^(1-q) - 1)/(1 - q), if q != 1
-    # H(x) := log(x), if q == 1
+    # H(x) := log(v+x), if q == 1
     def H(x):
         logVpX = log(v+x)
         return helper2( (1. - q) * logVpX ) * logVpX
