@@ -72,7 +72,7 @@ def ZipfMandelbrotRandomGenerator(n, q, v = 1, seed = None):
             #   u >= H(0.5) - h(0) = Hx0 and u is taken from
             #   (Hx0, Hn].
             #
-            #   Therefore, the acceptance rate for k = 1 is P(accepted | k = 0) = 1
+            #   Therefore, the acceptance rate for k = 0 is P(accepted | k = 0) = 1
             #   and the probability that 1 is returned as random value is
             #   P(k = 0 and accepted) = P(accepted | k = 0) * P(k = 0) = C / v^q
             #
