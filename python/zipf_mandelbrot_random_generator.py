@@ -12,7 +12,12 @@ def ZipfMandelbrotRandomGenerator(n, q, v = 1, seed = None):
 
     # helper function that calculates log(1 + x) / x
     def helper1(x):
-        return log1p(x)/x if abs(x) > 0 else 1.
+        if x == -1.:
+            return float('inf')
+        elif x == 0.:
+            return 1.
+        else:
+            return log1p(x)/x
 
     # helper function to calculate (exp(x) - 1) / x
     def helper2(x):
