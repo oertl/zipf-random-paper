@@ -61,5 +61,26 @@ class TestZipfMandelbrotGenerator(unittest.TestCase):
     def test13(self):
         self.run_test(n = 10, q = 0.01, v = 0.01)
 
+    def test14(self):
+        self.run_test(n = 10, q = 2, v = 1e5)
+
+    def test15(self):
+        self.run_test(n = 10, q = 2, v = 1e10)
+
+    def test16(self):
+        self.run_test(n = 10, q = 2, v = 1e15)
+
+    def test17(self):
+        self.run_test(n = 10, q = 2, v = 1e20)
+
+    def test18(self):
+        self.run_test(n = 10, q = 2, v = 1e-20)
+
+    def test19(self):
+        self.run_test(n = 10, q = 0, v = numpy.nextafter(0,1))
+
+    def test20(self):
+        self.run_test(n = 10, q = 0.1, v = numpy.nextafter(0,1))
+
 if __name__ == '__main__':
     unittest.main()
