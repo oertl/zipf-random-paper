@@ -13,7 +13,6 @@ class TestZipfMandelbrotGenerator(unittest.TestCase):
         N = 1000000
 
         expectedRaw = numpy.array([pow(v+k,-q) for k in range(0, n)])
-        expectedRawSum = expectedRaw.sum
         expected = expectedRaw/(numpy.sum(expectedRaw)) * N
         gen = zipf_mandelbrot_random_generator.ZipfMandelbrotRandomGenerator(n, q, v)
         observed = numpy.zeros(n)
