@@ -30,7 +30,7 @@ def ZipfMandelbrotRandomGenerator(n, q = 1., v = 1., seed = None):
         w = log1p(x * b)
         return helper2( r * w ) * w * c
 
-    # h(x) := H'(x) = 1 / (v+x)^q
+    # h(x) := H'(x - 0.5) = 1 / (v+x)^q
     def h(x):
         return exp(-q * log(v+x))
 
